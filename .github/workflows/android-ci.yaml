@@ -30,3 +30,6 @@ jobs:
 
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
+
+      - name: Build APK
+      - run: ./gradlew app:assembleDebug
