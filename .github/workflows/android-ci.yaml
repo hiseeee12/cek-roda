@@ -31,7 +31,7 @@ jobs:
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
 
-      - name: Buildkan APK Dong
+      - name: Build APK 
         run: ./gradlew assembleDebug
 
       - name: Upload APK Artifact
