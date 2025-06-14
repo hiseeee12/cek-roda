@@ -6,7 +6,8 @@ plugins {
     alias(libs.plugins.google.firebase.crashlytics)
     alias(libs.plugins.google.gms.google.services)
     alias(libs.plugins.google.firebase.crashlytics)
-    id("com.google.gms.google-services") version "4.4.2" apply false
+    id("com.android.application")
+id("com.google.gms.google-services")
 }
 
 android {
@@ -57,7 +58,7 @@ android {
 
 dependencies {
     implementation(libs.firebase.crashlytics)
-
+implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -66,11 +67,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-
+implementation("com.google.firebase:firebase-analytics")
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     kapt(libs.androidx.room.compiler)
-
+implementation("com.google.firebase:firebase-analytics")
     implementation(libs.viewmodel.compose)
 
     implementation(libs.coil.compose)
